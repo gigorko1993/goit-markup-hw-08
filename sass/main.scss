@@ -1,0 +1,31 @@
+// // normalize css
+// @import "node_modules/modern-normalize/modern-normalize.css";
+// utils
+@import "base/fonts";
+@import "utils/main";
+// defaults
+@import "base/defaults";
+// header
+@import "components/header";
+// hero
+@import "components/hero";
+// section
+@import "components/section";
+// feautures
+@import "components/feautures";
+// description
+@import "components/description";
+// our-team
+@import "components/our-team";
+// social-networks
+@import "components/social-network";
+// customers
+@import "components/customers";
+// footer
+@import "components/footer";
+// portfolio
+@import "components/portfolio";
+// backdrop
+@import "components/backdrop";
+// backdrop modal form
+@import "components/backdrop-modal-form";

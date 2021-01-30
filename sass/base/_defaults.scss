@@ -1,0 +1,51 @@
+body {
+  color: $title-text-color;
+  font-family: $main-font-family;
+  letter-spacing: $main-letter-spacing;
+}
+
+.list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.link,
+.logo,
+.icon-thumb {
+  text-decoration: none;
+}
+
+.logo--blue {
+  color: $accent-color;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.image-block {
+  display: block;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+}

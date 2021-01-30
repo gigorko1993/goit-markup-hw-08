@@ -1,0 +1,48 @@
+// portfolio card
+@import "portfolio-card";
+// portfolio card overlay
+@import "portfolio-overlay";
+// transition mixin
+@import "../base/transition";
+
+.portfolio {
+  background-color: $bg-color-white;
+
+  &__list-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-item:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  &__button-item {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    padding: 6px 22px;
+    border-radius: 4px;
+    border: 0 solid transparent;
+
+    color: $primary-text-color;
+    background: #f5f4fa;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    outline: none;
+
+    @include transition(color, background-color, box-shadow);
+  }
+
+  &__button:hover,
+  &__button:focus {
+    color: $white-text-color;
+    background-color: $accent-color;
+    border: 0 solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

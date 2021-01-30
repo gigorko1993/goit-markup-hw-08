@@ -1,0 +1,53 @@
+@import "../base/transition";
+
+.portfolio__card-overlay {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    background-color: $bg-accent-overlay;
+    content: "";
+
+    @include transition(transform);
+  }
+}
+
+.portfolio__link-overlay:hover .portfolio__card-overlay::after,
+.portfolio__link-overlay:focus .portfolio__card-overlay::after {
+  transform: translateY(-100%);
+  z-index: 1;
+}
+
+.portfolio__link-overlay:hover .portfolio__card-text-overlay,
+.portfolio__link-overlay:focus .portfolio__card-text-overlay {
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.portfolio__card-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+
+  width: 322px;
+  height: 168px;
+
+  @include transition(transform);
+}
+
+.portfolio__text-overlay {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $white-text-color;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+}
