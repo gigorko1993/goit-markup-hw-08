@@ -3,8 +3,11 @@
 // utils
 @import "base/fonts";
 @import "utils/main";
+@import "utils/fonts";
 // defaults
 @import "base/defaults";
+// transition property
+@import "base/transition";
 // header
 @import "components/header";
 // hero

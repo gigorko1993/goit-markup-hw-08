@@ -2,9 +2,6 @@
 @import "portfolio-card";
 // portfolio card overlay
 @import "portfolio-overlay";
-// transition mixin
-@import "../base/transition";
-
 .portfolio {
   background-color: $bg-color-white;
 
