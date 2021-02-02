@@ -2,19 +2,6 @@
   background-color: $bg-color-white;
 
   border-bottom: 1px solid #ececec;
-
-  &__mobile-icon-thumb {
-    margin-left: auto;
-    padding: 10px 0;
-
-    @media (min-width: $tablet) {
-      display: none;
-    }
-  }
-  &__mobile-icon {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 .main-nav {
@@ -23,29 +10,18 @@
 }
 
 .main-nav__logo {
+  margin-right: 90px;
+
   color: $logo-text-black;
 
   font-family: $sec-font-family;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
-
-  @media (min-width: $tablet) {
-    margin-right: 88px;
-  }
-  @media (min-width: $desctop) {
-    margin-right: 93px;
-    font-size: 26px;
-    line-height: 1.19;
-  }
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .site-nav {
-  display: none;
-
-  @media (min-width: $tablet) {
-    display: flex;
-  }
+  display: flex;
 }
 
 .site-nav__item:not(:first-child) {
@@ -90,24 +66,12 @@
 }
 
 .auth-nav {
-  display: none;
-
-  @media (min-width: $tablet) {
-    display: block;
-    margin-left: auto;
-  }
-  @media (min-width: $desctop) {
-    display: flex;
-  }
+  display: flex;
+  margin-left: auto;
 }
 
 .auth-nav__item:not(:first-child) {
-  @media (max-width: 1599px) {
-    margin-top: 10px;
-  }
-  @media (min-width: $desctop) {
-    margin-left: 50px;
-  }
+  margin-left: 50px;
 }
 
 .auth-nav__link {

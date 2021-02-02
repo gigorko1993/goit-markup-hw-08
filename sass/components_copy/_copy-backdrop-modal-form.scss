@@ -1,0 +1,142 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: $primary-text-color;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  &__label:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  &__label--textarea {
+    margin-bottom: 20px;
+  }
+
+  &__label--checkbox {
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    margin-top: 4px;
+
+    padding-top: 11px;
+    padding-right: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    width: 448px;
+    display: block;
+
+    color: $primary-text-color;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include transition(border-color);
+  }
+
+  &__input--textarea {
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    resize: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 37px;
+    left: 15px;
+    transform: translateY(-50%);
+
+    fill: $primary-text-color;
+    @include transition(fill);
+  }
+
+  &__input:focus-within + &__icon {
+    fill: $accent-color;
+  }
+
+  &__input:focus {
+    border-color: #2196f3;
+    outline: none;
+  }
+
+  &__checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 23px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &__checkbox-link {
+    color: $accent-color;
+    text-decoration-skip-ink: none;
+  }
+
+  &__checkbox-label::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 2px solid $primary-text-color;
+    content: "";
+  }
+
+  &__checkbox:checked ~ &__checkbox-label::after {
+    background-image: url("../image/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-color: transparent;
+    background-color: $accent-color;
+  }
+
+  &__button {
+    color: $white-text-color;
+    background-color: $accent-color;
+
+    min-width: 200px;
+    min-height: 50px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+
+    @include transition(background-color);
+    outline: none;
+    border-color: transparent;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: #188ce8;
+  }
+}

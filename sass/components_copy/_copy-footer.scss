@@ -1,0 +1,140 @@
+.footer {
+  color: $white-text-color;
+  background-color: $bg-hero-footer;
+
+  &__container {
+    position: relative;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: baseline;
+  }
+
+  &__logo {
+    color: $white-text-color;
+    font-family: $sec-font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: $footer-transparent-color;
+
+    transition-property: color;
+    transition-duration: $duration;
+    transition-timing-function: $cubic-bezier;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__list {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__addres {
+    font-family: $main-font-family;
+    font-style: normal;
+  }
+
+  &__form {
+    position: absolute;
+    right: 15px;
+    top: 72px;
+  }
+
+  &__form-label {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: $white-text-color;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__form-input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 358px;
+    background-color: transparent;
+    color: $footer-transparent-color;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+
+  &__form-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: $white-text-color;
+  }
+
+  &__form-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__form-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 12px;
+    padding: 0;
+    width: 200px;
+    min-height: 50px;
+
+    background-color: $accent-color;
+    color: $white-text-color;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0px transparent;
+  }
+
+  &__form-btn::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+
+    background-image: url("../image/iconsend.svg");
+
+    background-size: contain;
+    display: inline-block;
+    fill: currentColor;
+  }
+}
