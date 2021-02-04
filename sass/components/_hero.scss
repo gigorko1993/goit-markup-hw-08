@@ -1,6 +1,6 @@
 .hero {
   max-width: 1600px;
-  height: 600px;
+  height: auto;
 
   background-position: center;
   background-color: $bg-hero;
@@ -9,15 +9,26 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(../image/hero.jpg);
-  background-size: cover;
-
+  background-size: contain;
+  background-repeat: no-repeat;
   text-align: center;
-  padding-top: 200px;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin: 0 auto;
 
+  @media screen and (min-width: $desctop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
   &__title-box {
-    width: 696px;
+    width: 360px;
     margin: 0 auto;
+
+    @media screen and (min-width: $desctop) {
+      width: 696px;
+    }
   }
 
   &__title {
@@ -27,11 +38,17 @@
     color: $white-text-color;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+
+    @media screen and (min-width: $desctop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
+
   &__button {
     border-radius: 4px;
     padding: 10px 32px;
