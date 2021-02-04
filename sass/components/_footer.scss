@@ -2,27 +2,55 @@
   color: $white-text-color;
   background-color: $bg-hero-footer;
 
+  &__addition-thumb {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: $desctop) {
+      align-items: baseline;
+    }
+  }
+
   &__container {
-    position: relative;
-    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    align-items: baseline;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (min-width: $desctop) {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $desctop) {
+      margin-bottom: 0;
+    }
   }
 
   &__logo {
     color: $white-text-color;
     font-family: $sec-font-family;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-  }
-
-  &__logo {
+    font-size: 24px;
+    line-height: 1.17;
     display: inline-block;
     margin-bottom: 20px;
+
+    @media screen and (min-width: $desctop) {
+      font-size: 26px;
+      line-height: 1.19;
+    }
   }
 
   &__link {
@@ -44,17 +72,24 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desctop) {
+      margin-bottom: 9px;
+    }
   }
+
   &__addres {
     font-family: $main-font-family;
     font-style: normal;
   }
 
   &__form {
-    position: absolute;
-    right: 15px;
-    top: 72px;
+    @media screen and (min-width: $desctop) {
+      position: absolute;
+      right: 15px;
+      top: 72px;
+    }
   }
 
   &__form-label {
@@ -65,7 +100,7 @@
 
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     text-transform: uppercase;
   }
 
@@ -74,7 +109,9 @@
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    min-width: 358px;
+    margin-bottom: 20px;
+
+    width: 450px;
     background-color: transparent;
     color: $footer-transparent-color;
 
@@ -86,21 +123,19 @@
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-  }
 
-  &__form-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-
-    color: $white-text-color;
+    @media screen and (min-width: $desctop) {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
 
   &__form-thumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @media screen and (min-width: $desctop) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__form-btn {
@@ -108,7 +143,6 @@
     align-items: center;
     justify-content: center;
 
-    margin-left: 12px;
     padding: 0;
     width: 200px;
     min-height: 50px;
@@ -123,6 +157,10 @@
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: 0px transparent;
+
+    @media screen and (min-width: $desctop) {
+      margin-left: 12px;
+    }
   }
 
   &__form-btn::after {

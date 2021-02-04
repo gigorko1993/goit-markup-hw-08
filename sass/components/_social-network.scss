@@ -7,7 +7,12 @@
   }
 
   &--wrapped {
-    margin-left: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $desctop) {
+      margin-left: 70px;
+      margin-bottom: 0;
+    }
   }
 
   &__thumb {

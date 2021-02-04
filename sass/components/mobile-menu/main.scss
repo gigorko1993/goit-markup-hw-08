@@ -15,11 +15,13 @@
   padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
-  opacity: 0;
+  display: none;
 
   &.is-open {
+    display: block;
     opacity: 1;
-    // pointer-events: none;
+    pointer-events: none;
+    overflow-y: scroll;
   }
 
   @media screen and (min-width: $tablet) {
@@ -29,6 +31,7 @@
   &__button {
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 11;
     margin-left: auto;
     margin-top: 10px;
