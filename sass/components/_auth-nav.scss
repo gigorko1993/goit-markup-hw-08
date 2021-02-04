@@ -1,0 +1,54 @@
+.auth-nav {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+  }
+  @media (min-width: $desctop) {
+    display: flex;
+  }
+}
+
+.auth-nav__item:not(:first-child) {
+  @media (max-width: 1599px) {
+    margin-top: 10px;
+  }
+  @media (min-width: $desctop) {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}
+
+.auth-nav__link {
+  display: flex;
+  align-items: center;
+
+  color: $title-text-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include transition(color);
+}
+
+.auth-nav__link:hover,
+.auth-nav__link:focus {
+  color: $accent-color;
+}
+
+.auth-nav__icon {
+  margin-right: 10px;
+}
+
+.auth-nav__icon--envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.auth-nav__icon--smartphone {
+  width: 10px;
+  height: 16px;
+}

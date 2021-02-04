@@ -1,0 +1,25 @@
+.mobile-auth-nav {
+  margin-bottom: 64px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
+  }
+
+  &__link--tel {
+    font-size: 34px;
+    line-height: 1.18;
+    color: $accent-color;
+  }
+
+  &__link--email {
+    font-size: 24px;
+    line-height: 1.17;
+    color: $title-text-color;
+  }
+}

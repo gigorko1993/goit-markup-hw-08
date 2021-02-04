@@ -1,0 +1,25 @@
+.mobile-site-nav {
+  margin-bottom: 302px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+
+    color: $primary-text-color;
+  }
+
+  &__link--current {
+    color: $accent-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
