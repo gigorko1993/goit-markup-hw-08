@@ -5,9 +5,9 @@
 .mobile-menu {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
   z-index: 10;
 
   background-color: $bg-color-white;
@@ -15,13 +15,16 @@
   padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  @include transition(opacity, visibility);
 
   &.is-open {
-    display: block;
     opacity: 1;
-    pointer-events: none;
-    overflow-y: scroll;
+    visibility: visible;
+    pointer-events: initial;
   }
 
   @media screen and (min-width: $tablet) {

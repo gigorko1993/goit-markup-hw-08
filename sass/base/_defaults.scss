@@ -4,6 +4,11 @@ body {
   letter-spacing: $main-letter-spacing;
 }
 
+body.modal-open {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 .list {
   list-style: none;
 

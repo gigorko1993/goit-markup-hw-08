@@ -25,10 +25,13 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    width: 530px;
+    width: 450px;
 
-    padding-top: 40px;
-    padding-bottom: 40px;
+    @media screen and (min-width: $desctop) {
+      width: 530px;
+    }
+
+    padding: 40px;
 
     background-color: $bg-color-white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),

@@ -7,15 +7,31 @@
 
   &__list-button {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desctop) {
+      margin-bottom: 50px;
+    }
+  }
+  &__button-item:not(:nth-child(3n + 1)) {
+    @media screen and (max-width: 767px) {
+      margin-left: 8px;
+    }
   }
 
+  &__button-item:nth-child(-n + 3) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
   &__button-item:not(:first-child) {
     margin-left: 8px;
-  }
-
-  &__button-item {
-    margin-bottom: 50px;
   }
 
   &__button {

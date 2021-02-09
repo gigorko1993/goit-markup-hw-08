@@ -32,9 +32,7 @@
     border: 1px solid $social-link-color;
     border-radius: 4px;
 
-    transition-property: color, border;
-    transition-duration: $duration;
-    transition-timing-function: $cubic-bezier;
+    @include transition(color, border);
   }
 
   &__link:hover,
