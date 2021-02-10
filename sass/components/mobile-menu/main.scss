@@ -36,9 +36,13 @@
     justify-content: center;
     align-items: center;
     z-index: 11;
+
     margin-left: auto;
     margin-top: 10px;
     padding: 0;
+
+    width: 40px;
+    height: 40px;
 
     border: none;
     background-color: transparent;
@@ -52,8 +56,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 16px;
   }
 
   &__button &__icon-cross {
@@ -63,6 +67,12 @@
   &__button.is-open &__icon-cross {
     display: block;
   }
+
+  &__button.is-open &__icon {
+    width: 19px;
+    height: 19px;
+  }
+
   &__button.is-open &__icon-menu {
     display: none;
   }
