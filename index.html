@@ -158,7 +158,15 @@
                 <li class="description__item">
                     <a href="./index.html" class="description__link link">
                         <div class="description__thumb">
-                            <img src="./image/img1.jpg" alt="Семантически верний вебдизайн" class="description__image image-block"/>
+                            <picture>
+                                <source srcset="./image/img1.webp 1x, ./image/img1@2x.webp 2x" 
+                                type="image/webp"/>
+
+                                <img srcset="./image/img1.jpg 1x, ./image/img1@2x.jpg 2x" 
+                                src="./image/img1.jpg" 
+                                alt="Семантически верний вебдизайн" 
+                                class="description__image image-block"/>
+                            </picture>
                             <div class="description__actions">
                                 <p class="description__text">Десктопные приложения</p>
                             </div>
@@ -168,7 +176,15 @@
                 <li class="description__item">
                     <a href="./index.html" class="description__link link">
                         <div class="description__thumb">
-                            <img src="./image/img2.jpg" alt="Адаптивность на всех устройствах" class="description__image image-block"/>
+                            <picture>
+                                <source srcset="./image/img2.webp 1x, ./image/img2@2x.webp 2x" 
+                                type="image/webp"/>
+
+                                <img srcset="./image/img2.jpg 1x, ./image/img2@2x.jpg 2x" 
+                                src="./image/img2.jpg" 
+                                alt="Адаптивность на всех устройствах" 
+                                class="description__image image-block"/>
+                            </picture>
                             <div  class="description__actions">
                                 <p class="description__text">Мобильные приложения</p>
                             </div>
@@ -178,7 +194,14 @@
                 <li class="description__item">
                     <a href="./index.html" class="description__link link">
                         <div class="description__thumb">
-                            <img src="./image/img3.jpg" alt="Ідеальний цветовой подбор" class="description_image image-block"/>
+                            <picture>
+                                <source srcset="./image/img3.webp 1x, ./image/img3@2x.webp 2x" type="image/webp" />
+                                
+                                <img srcset="./image/img3.jpg 1x, ./image/img3@2x.jpg 2x" 
+                                src="./image/img3.jpg"
+                                alt="Ідеальний цветовой подбор"
+                                class="description__image image-block"/>
+                            </picture>
                             <div  class="description__actions">
                                 <p class="description__text">Дизайнерские решения</p>
                             </div>
@@ -195,7 +218,19 @@
             <ul class="our-team__list list">
                 <li class="our-team__item">
                  <div class="our-team__container">
-                    <a href=""><img src="./image/avatar/avatar1.jpg" alt="Фотография Игоря Демьяненко" class="image-block"/></a>
+                    <a href="">
+                    <picture>                        
+                        <source srcset="./image/avatar/desctop/avatar.webp 1x, ./image/avatar/desctop/avatar@2x.webp 2x" type="image/webp" media="(min-width:1200px)" />
+                        <source srcset="./image/avatar/tablet/avatar.webp 1x, ./image/avatar/tablet/avatar@2x.webp 2x" type="image/webp" media="(min-width:768px)" />
+                        <source srcset="./image/avatar/mobile/avatar.webp 1x, ./image/avatar/mobile/avatar@2x.webp 2x" type="image/webp" media="(max-width:767px)" />
+
+                        <source srcset="./image/avatar/desctop/avatar.jpg 1x, ./image/avatar/desctop/avatar@2x.jpg 2x" media="(min-width:1200px)" />
+                        <source srcset="./image/avatar/tablet/avatar.jpg 1x, ./image/avatar/tablet/avatar@2x.jpg 2x" media="(min-width:768px)" />
+                        <source srcset="./image/avatar/mobile/avatar.jpg 1x, ./image/avatar/mobile/avatar@2x.jpg 2x" media="(max-width:767px)" />
+                            
+                        <img src="./image/avatar/mobile/avatar.jpg" alt="Фотография Игоря Демьяненко" class="image-block"/>
+                    </picture>
+                    </a>
                     <h3 class="our-team__title">Игорь Демьяненко</h3>
                     <p class="our-team__text">Product Designer</p>
                     <ul class="social-network social-network--margined list">
@@ -232,7 +267,25 @@
                 </li>
                 <li class="our-team__item">
                  <div class="our-team__container">
-                    <a href=""><img src="./image/avatar/avatar2.jpg" alt="Фотография Ольги Репиной" class="image-block"/></a>
+                    <a href="">
+                        <picture>
+                        <source srcset="./image/avatar/desctop/avatar2.webp 1x, ./image/avatar/desctop/avatar2@2x.webp 2x" type="image/webp"
+                            media="(min-width:1200px)" />
+                        <source srcset="./image/avatar/tablet/avatar2.webp 1x, ./image/avatar/tablet/avatar2@2x.webp 2x" type="image/webp"
+                            media="(min-width:768px)" />
+                        <source srcset="./image/avatar/mobile/avatar2.webp 1x, ./image/avatar/mobile/avatar2@2x.webp 2x" type="image/webp"
+                            media="(max-width:767px)" />
+                        
+                        <source srcset="./image/avatar/desctop/avatar2.jpg 1x, ./image/avatar/desctop/avatar2@2x.jpg 2x"
+                            media="(min-width:1200px)" />
+                        <source srcset="./image/avatar/tablet/avatar2.jpg 1x, ./image/avatar/tablet/avatar2@2x.jpg 2x"
+                            media="(min-width:768px)" />
+                        <source srcset="./image/avatar/mobile/avatar2.jpg 1x, ./image/avatar/mobile/avatar2@2x.jpg 2x"
+                            media="(max-width:767px)" />
+
+                        <img src="./image/avatar/mobile/avatar2.jpg" alt="Фотография Ольги Репиной" class="image-block"/>
+                        </picture>
+                    </a>
                     <h3 class="our-team__title">Ольга Репина</h3>
                     <p class="our-team__text">Frontend Developer</p>
                     <ul class="social-network social-network--margined list">
@@ -269,7 +322,25 @@
                 </li>
                 <li class="our-team__item">
                  <div class="our-team__container">
-                    <a href=""><img src="./image/avatar/avatar3.jpg" alt="Фотография Николая Тарасова" class="image-block"/></a>
+                    <a href="">
+                        <picture>
+                            <source srcset="./image/avatar/desctop/avatar3.webp 1x, ./image/avatar/desctop/avatar3@2x.webp 2x" type="image/webp"
+                                media="(min-width:1200px)" />
+                            <source srcset="./image/avatar/tablet/avatar3.webp 1x, ./image/avatar/tablet/avatar3@2x.webp 2x" type="image/webp"
+                                media="(min-width:768px)" />
+                            <source srcset="./image/avatar/mobile/avatar3.webp 1x, ./image/avatar/mobile/avatar3@2x.webp 2x" type="image/webp"
+                                media="(max-width:767px)" />
+                        
+                            <source srcset="./image/avatar/desctop/avatar3.jpg 1x, ./image/avatar/desctop/avatar3@2x.jpg 2x"
+                                media="(min-width:1200px)" />
+                            <source srcset="./image/avatar/tablet/avatar3.jpg 1x, ./image/avatar/tablet/avatar3@2x.jpg 2x"
+                                media="(min-width:768px)" />
+                            <source srcset="./image/avatar/mobile/avatar3.jpg 1x, ./image/avatar/mobile/avatar3@2x.jpg 2x"
+                                media="(max-width:767px)" />
+
+                            <img src="./image/avatar/mobile/avatar3.jpg" alt="Фотография Николая Тарасова" class="image-block"/>
+                        <picture>
+                    </a>
                     <h3 class="our-team__title">Николай Тарасов</h3>
                     <p class="our-team__text">Marketing</p>
                     <ul class="social-network social-network--margined list">
@@ -306,7 +377,24 @@
                 </li>
                 <li class="our-team__item">
                  <div class="our-team__container">
-                    <a href=""><img src="./image/avatar/avatar4.jpg" alt="Фотография Михаила Ермакова" class="image-block"/></a>
+                    <a href="">
+                        <picture>
+                            <source srcset="./image/avatar/desctop/avatar4.webp 1x, ./image/avatar/desctop/avatar4@2x.webp 2x" type="image/webp"
+                                media="(min-width:1200px)" />
+                            <source srcset="./image/avatar/tablet/avatar4.webp 1x, ./image/avatar/tablet/avatar4@2x.webp 2x" type="image/webp"
+                                media="(min-width:768px)" />
+                            <source srcset="./image/avatar/mobile/avatar4.webp 1x, ./image/avatar/mobile/avatar4@2x.webp 2x" type="image/webp"
+                                media="(max-width:767px)" />
+                            <source srcset="./image/avatar/desctop/avatar4.jpg 1x, ./image/avatar/desctop/avatar4@2x.jpg 2x"
+                                media="(min-width:1200px)" />
+                            <source srcset="./image/avatar/tablet/avatar4.jpg 1x, ./image/avatar/tablet/avatar4@2x.jpg 2x"
+                                media="(min-width:768px)" />
+                            <source srcset="./image/avatar/mobile/avatar4.jpg 1x, ./image/avatar/mobile/avatar4@2x.jpg 2x"
+                                media="(max-width:767px)" />
+
+                            <img src="./image/avatar/mobile/avatar4.jpg" alt="Фотография Михаила Ермакова" class="image-block"/>
+                        </picture>
+                    </a>
                     <h3 class="our-team__title">Михаил Ермаков</h3>
                     <p class="our-team__text">UI Designer</p>
                     <ul class="social-network social-network--margined list">
