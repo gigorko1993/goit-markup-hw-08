@@ -61,7 +61,6 @@ body {
 
 body.modal-open {
   overflow: hidden;
-  overflow-y: scroll;
 }
 
 .list {
@@ -88,12 +87,15 @@ body.modal-open {
 }
 
 @media (max-width: 767px) {
-  .container {
-    width: 480px;
-  }
   .container--header {
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
   }
 }
 
@@ -289,7 +291,6 @@ body.modal-open {
 .mobile-auth-nav__link {
   font-weight: 500;
   letter-spacing: 0.02em;
-  letter-spacing: 0.02em;
 }
 
 .mobile-auth-nav__link--tel {
@@ -327,14 +328,16 @@ body.modal-open {
 .mobile-menu {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
   z-index: 10;
   background-color: #ffffff;
   padding-left: 40px;
+  padding-right: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
+  overflow-y: scroll;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -359,9 +362,6 @@ body.modal-open {
 }
 
 .mobile-menu__button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,6 +372,7 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
   z-index: 11;
+  margin-left: auto;
   padding: 0;
   width: 40px;
   height: 40px;
@@ -1197,8 +1198,13 @@ body.modal-open {
   padding-right: 24px;
 }
 
-.portfolio__card-title,
-.portfolio__card-text {
+@media screen and (min-width: 768px) {
+  .portfolio__card-content:nth-child(-n + 2) {
+    min-height: 146px;
+  }
+}
+
+.portfolio__card-title, .portfolio__card-text {
   margin-top: 0;
   margin-bottom: 0;
   -webkit-transition-property: color;
@@ -1224,10 +1230,7 @@ body.modal-open {
   line-height: 1.88;
 }
 
-.portfolio__card-title:hover,
-.portfolio__card-title:focus,
-.portfolio__card-text:hover,
-.portfolio__card-text:focus {
+.portfolio__card-title:hover, .portfolio__card-title:focus, .portfolio__card-text:hover, .portfolio__card-text:focus {
   color: #2196f3;
 }
 
