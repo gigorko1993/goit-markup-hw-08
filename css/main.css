@@ -87,9 +87,14 @@ body.modal-open {
   margin-right: auto;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 767px) {
   .container {
     width: 480px;
+  }
+  .container--header {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -321,7 +326,7 @@ body.modal-open {
 }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -355,6 +360,9 @@ body.modal-open {
 }
 
 .mobile-menu__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,8 +373,6 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
   z-index: 11;
-  margin-left: auto;
-  margin-top: 10px;
   padding: 0;
   width: 40px;
   height: 40px;

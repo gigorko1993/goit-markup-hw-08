@@ -32,8 +32,14 @@ body.modal-open {
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: $mobile) {
+  @media (max-width: 767px) {
     width: 480px;
+
+    &--header {
+      position: relative;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
   @media (min-width: $tablet) {
     width: 768px;

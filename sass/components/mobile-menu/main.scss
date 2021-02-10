@@ -3,7 +3,7 @@
 @import "mobile-social";
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -32,13 +32,16 @@
   }
 
   &__button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 11;
 
-    margin-left: auto;
-    margin-top: 10px;
+    // margin-left: auto;
+    // margin-top: 10px;
     padding: 0;
 
     width: 40px;
