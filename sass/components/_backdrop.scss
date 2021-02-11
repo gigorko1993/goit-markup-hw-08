@@ -5,6 +5,7 @@
   background-color: $bg-backdrop;
 
   opacity: 1;
+  overflow-y: scroll;
   @include transition(opacity);
 
   &.is-hidden {

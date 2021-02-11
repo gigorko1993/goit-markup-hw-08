@@ -328,8 +328,8 @@ body.modal-open {
 .mobile-menu {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
   z-index: 10;
   background-color: #ffffff;
@@ -341,8 +341,12 @@ body.modal-open {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition-property: opacity, visibility;
-  transition-property: opacity, visibility;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, visibility, transform;
+  transition-property: opacity, visibility, transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -353,6 +357,8 @@ body.modal-open {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media screen and (min-width: 768px) {
@@ -1405,12 +1411,13 @@ body.modal-open {
 .backdrop {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
   z-index: 15;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow-y: scroll;
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 250ms;

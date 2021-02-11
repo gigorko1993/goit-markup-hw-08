@@ -17,13 +17,14 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
-  @include transition(opacity, visibility);
+  transform: translateX(100%);
+  @include transition(opacity, visibility, transform);
 
   &.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
+    transform: translateX(0);
   }
 
   @media screen and (min-width: $tablet) {
