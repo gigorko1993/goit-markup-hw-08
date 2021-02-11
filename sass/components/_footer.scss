@@ -132,16 +132,12 @@
 
   &__form-thumb {
     @media screen and (min-width: $desctop) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include centred(flex);
     }
   }
 
   &__form-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include centred(inline-flex);
 
     padding: 0;
     width: 200px;

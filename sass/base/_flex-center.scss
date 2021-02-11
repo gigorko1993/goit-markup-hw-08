@@ -1,0 +1,5 @@
+@mixin centred($property) {
+  display: $property;
+  justify-content: center;
+  align-items: center;
+}

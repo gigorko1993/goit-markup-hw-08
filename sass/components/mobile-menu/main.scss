@@ -3,11 +3,7 @@
 @import "mobile-social";
 
 .mobile-menu {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include position(absolute);
   z-index: 10;
 
   background-color: $bg-color-white;
@@ -35,12 +31,7 @@
   }
 
   &__button {
-    // position: absolute;
-    // top: 10px;
-    // right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centred(flex);
     z-index: 11;
 
     margin-left: auto;
@@ -59,9 +50,7 @@
   }
 
   &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centred(flex);
     width: 24px;
     height: 16px;
   }

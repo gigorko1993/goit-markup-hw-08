@@ -6,8 +6,12 @@
 @import "utils/fonts";
 // defaults
 @import "base/defaults";
-// transition property
+// transition property mixin
 @import "base/transition";
+// flex centred property mixin
+@import "base/flex-center";
+// position with zero top left bottom right mixin
+@import "base/position-zero";
 // header
 @import "components/header";
 // hero

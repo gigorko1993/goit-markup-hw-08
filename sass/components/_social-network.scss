@@ -27,9 +27,7 @@
   }
 
   &__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    @include centred(inline-flex);
 
     margin: 0 auto;
     width: 100%;
