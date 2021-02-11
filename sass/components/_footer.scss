@@ -131,8 +131,14 @@
   }
 
   &__form-thumb {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     @media screen and (min-width: $desctop) {
-      @include centred(flex);
+      justify-content: center;
+      flex-direction: row;
     }
   }
 
