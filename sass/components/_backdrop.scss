@@ -8,27 +8,29 @@
   overflow-y: scroll;
   @include transition(opacity);
 
+  @media screen and (max-width: 767px) {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
   }
 
   &.is-hidden &__modal {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
+
+    @media screen and (min-width: $tablet) {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
   }
 
   &__modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    position: relative;
 
     width: 450px;
-
-    @media screen and (min-width: $desctop) {
-      width: 530px;
-    }
-
     padding: 40px;
 
     background-color: $bg-color-white;
@@ -36,7 +38,21 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
+    transform: scale(1);
     @include transition(transform);
+
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(1);
+      @include transition(transform);
+    }
+
+    @media screen and (min-width: $desctop) {
+      width: 530px;
+    }
   }
 
   &__close-button {
