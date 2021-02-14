@@ -121,6 +121,7 @@ body.modal-open {
 
 .image-block {
   display: block;
+  width: 100%;
 }
 
 .icon {
@@ -256,10 +257,6 @@ body.modal-open {
   height: 16px;
 }
 
-.mobile-site-nav {
-  margin-bottom: 302px;
-}
-
 .mobile-site-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -309,6 +306,8 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mobile-social__item + .mobile-social__item {
@@ -327,38 +326,33 @@ body.modal-open {
 
 .mobile-menu {
   position: absolute;
+  display: none;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   z-index: 10;
+  width: 100%;
+  min-height: 100vw;
+  height: 100%;
   background-color: #ffffff;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  -webkit-transform: scaleX(0.8);
-          transform: scaleX(0.8);
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   pointer-events: initial;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  overflow-y: scroll;
 }
 
 @media screen and (min-width: 768px) {
