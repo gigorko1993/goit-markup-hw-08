@@ -1373,8 +1373,19 @@ body.modal-open {
   margin-bottom: 0;
   color: #ffffff;
   font-weight: 400;
-  font-size: 18px;
   line-height: 1.56;
+}
+
+@media screen and (max-width: 479px) {
+  .portfolio__text-overlay {
+    font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio__text-overlay {
+    font-size: 18px;
+  }
 }
 
 .portfolio {
@@ -1431,7 +1442,6 @@ body.modal-open {
   color: #212121;
   background: #f5f4fa;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.62;
   outline: none;
   -webkit-transition-property: color, background-color, -webkit-box-shadow;
@@ -1442,6 +1452,18 @@ body.modal-open {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .portfolio__button {
+    font-size: calc(10px + (6 + 6 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio__button {
+    font-size: 16px;
+  }
 }
 
 .portfolio__button:hover, .portfolio__button:focus {
@@ -1470,14 +1492,6 @@ body.modal-open {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
-  .backdrop {
-    padding-top: 93px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -1497,7 +1511,6 @@ body.modal-open {
 
 .backdrop__modal {
   position: relative;
-  width: 450px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1513,23 +1526,19 @@ body.modal-open {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .backdrop__modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    width: 450px;
   }
 }
 
@@ -1579,9 +1588,20 @@ body.modal-open {
   margin-bottom: 12px;
   color: #212121;
   font-weight: 700;
-  font-size: 20px;
   line-height: 1.15;
   text-align: center;
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__name {
+    font-size: calc(12px + (8 + 8 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__name {
+    font-size: 20px;
+  }
 }
 
 .modal-form__label:not(:nth-last-child(-n + 3)) {
@@ -1591,9 +1611,20 @@ body.modal-open {
 .modal-form__label {
   position: relative;
   font-weight: 400;
-  font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__label {
+    font-size: calc(8px + (4 + 4 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__label {
+    font-size: 12px;
+  }
 }
 
 .modal-form__label--textarea {
@@ -1610,7 +1641,6 @@ body.modal-open {
   padding-right: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
-  width: 370px;
   color: #212121;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1620,6 +1650,18 @@ body.modal-open {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__input {
+    width: calc(200px + (170 + 170 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__input {
+    width: 370px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1638,7 +1680,6 @@ body.modal-open {
 
 .modal-form__icon {
   position: absolute;
-  top: 37px;
   left: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1649,6 +1690,18 @@ body.modal-open {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__icon {
+    top: calc(30px + (7 + 7 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__icon {
+    top: 37px;
+  }
 }
 
 .modal-form__input:focus-within + .modal-form__icon {
@@ -1665,8 +1718,19 @@ body.modal-open {
   position: relative;
   padding-left: 23px;
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__checkbox-label {
+    font-size: calc(6px + (8 + 8 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__checkbox-label {
+    font-size: 14px;
+  }
 }
 
 .modal-form__checkbox-link {
@@ -1704,7 +1768,6 @@ body.modal-open {
   min-height: 50px;
   text-align: center;
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   border-radius: 4px;
@@ -1716,6 +1779,18 @@ body.modal-open {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   border-color: transparent;
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__button {
+    font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 480));
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__button {
+    font-size: 16px;
+  }
 }
 
 .modal-form__button:hover, .modal-form__button:focus {
