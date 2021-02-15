@@ -8,12 +8,6 @@
   overflow-y: scroll;
   @include transition(opacity);
 
-  @media screen and (max-width: 767px) {
-    padding-top: 93px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -30,7 +24,6 @@
   &__modal {
     position: relative;
 
-    width: 450px;
     padding: 40px;
 
     background-color: $bg-color-white;
@@ -41,15 +34,16 @@
     transform: scale(1);
     @include transition(transform);
 
-    @media screen and (min-width: $tablet) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-      transform: translate(-50%, -50%) scale(1);
-      @include transition(transform);
+    transform: translate(-50%, -50%) scale(1);
+    @include transition(transform);
+
+    @media screen and (min-width: $mobile) {
+      width: 450px;
     }
-
     @media screen and (min-width: $desctop) {
       width: 530px;
     }

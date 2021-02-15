@@ -66,6 +66,12 @@
   color: $white-text-color;
 
   font-weight: 400;
-  font-size: 18px;
+  @media screen and (max-width: 479px) {
+    font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 480));
+  }
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+  }
+
   line-height: 1.56;
 }
