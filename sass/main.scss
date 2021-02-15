@@ -12,6 +12,8 @@
 @import "base/flex-center";
 // position with zero top left bottom right mixin
 @import "base/position-zero";
+// adaptive font-sizes mixin
+@import "base/adaptive-font";
 // header
 @import "components/header";
 // hero
